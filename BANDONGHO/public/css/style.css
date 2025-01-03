@@ -1,0 +1,270 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#khung{
+    width: 1260px;
+    margin: auto;
+}
+
+.thanhdau{
+    display: flex;
+    padding: 10px;
+}
+.logo{
+    flex: 2;
+}
+.logo img{
+    width: 280px;
+    height: 100%;
+    padding: 25px;
+    object-fit: fill;
+    object-fit: cover;
+}
+.menu{
+    flex: 8;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.menu_ul{
+    display: flex;
+    padding: 35px;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-left:0px;
+}
+.menu_li a:hover{
+    color: #f90;
+}
+.giohang{
+    flex: 0,5;
+    padding: 28px;
+}
+.giohang img{
+    width: 50px;
+    height: 50px;
+}
+.dndk{
+    flex: 3;
+    padding: 25px;
+}
+.dndk button{
+    width: 90px;
+    height: 45px;
+    background-color: rgb(89, 88, 88);
+    border: 1px solid white;
+    border-radius: 38px;
+}
+.dndk button a{
+    color: aliceblue;
+}
+.banner{
+    margin-top: -25px;
+}
+.banner img{
+    width: 1260px;
+    object-fit: cover;
+    object-fit: fill;
+    height: 100%;
+}
+.dauthan{
+    height: 130px;
+    width: 1260px;
+    display: flex;
+    margin-top: -5px;
+    justify-content: space-between;
+}
+.loaidh{
+    padding: 10px;
+}
+.yt{
+    padding: 10px;
+}
+.tk{
+    padding: 27px;
+}
+.tk input{
+    width: 280px;
+    height: 45px;
+    color: rgb(20, 23, 26);
+    background-color: rgb(252, 254, 252);
+    border: 1px solid  rgb(15, 17, 15) ;
+    border-radius: 20px;
+    padding: 20px;
+}
+.chu{
+    text-align: center;
+    margin-top: -30px;
+    position: relative;
+}
+
+.chunen{
+    padding: 10px;
+}
+#khungsp{
+    display: flex;
+    flex-wrap: wrap;
+}
+select{
+    height: 30px;
+}
+.sp{
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    width: 23%;
+    padding: 10px;
+.mt{
+    font-size: 20px;
+    padding: 8px 0;
+}
+}
+.text {
+    background-color: gold;
+    width: 45px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+    border-radius: 15px;
+    padding: 12px;
+    position: absolute;
+    color: rgb(11, 12, 12);
+    font-size: 15px;
+}
+
+.sp img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.sp img:hover{
+    opacity: 0.6;
+}
+.gia{
+    margin-top: 3px;
+    font-size: 20px;
+}
+.xs{
+    margin-top: 3px;
+}
+.mt{
+    margin-top: 2px;
+}
+.dh{
+    margin-top: 8px;
+    display: flex;
+    justify-content:space-between;
+}
+.dh button{
+    width: 100px;
+    height: 30px;
+    background-color:#f90 ;
+    border-radius: 45px;
+    border: 1px solid #f90 ;
+    color: aliceblue;
+    cursor: pointer;
+}
+.dh button a{
+    color: aliceblue;
+}
+.dh button:hover{
+    background-color: rgb(232, 31, 31);
+}
+.TH{
+    
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 40px;
+}
+.ATHNT{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 30px;
+    
+}
+.ATHNT2{
+    display: flex;
+    margin-left: 30px;
+    
+}
+.ath1 img{
+    margin-top: 25px;
+    width: 75%;
+    height: 100%;
+    object-fit: fill;
+    margin-left: 21px;
+}
+.ath img{
+    width: 75%;
+    height: 100%;
+    object-fit: fill;
+    margin-left: 21px;
+}
+.phancuoi{
+    margin-top: 80px;
+    background-color: rgb(26, 25, 25);
+    width: 100%;
+    height: 330px;
+    padding: 20px;
+    display: flex;
+}
+.phancuoi p{
+    font-size: 20px;
+    padding: 7px;
+    color: rgb(255, 255, 255);
+}
+.phancuoi p a{
+    color: rgb(255, 255, 255);
+}
+.logocuoi img{
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    object-fit: fill;
+}
+table{
+    width: 100%;
+}
+table,td,th{
+    border: 3px solid rgb(249, 241, 241);
+    border-collapse: collapse;
+}
+td,th{
+    padding: 6px 10px ;
+}
+.hm{
+    height: 40px;
+    background-color: gray;
+}
+.hb{
+    height: 40px;
+    background-color: gray;
+}
+.tt{
+    padding: 30px;
+}
+#showcart{
+    display: none;
+}
+#showcart.show{
+    display: block;
+}
+#showcart table{
+    position: fixed;
+    right: 20px;
+    top:150px;
+    padding: 30px;
+    width: 150px;
+    background-color: aliceblue;
+    border: 1px #CCC s;
+}
