@@ -7,42 +7,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body style="background-color: rgba(128, 128, 128, 0.429);">
-    <div id="showcart">
-        <table >
-            <thead>
-                <tr class="hm">
-                    <th>STT</th>
-                    <th>Hình</th>
-                    <th>Tên SP</th>
-                    <th>Đơn giá</th>
-                    <th>Số Lượng</th>
-                    <th>Thành Tiền</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="hh">
-                    <th>1</th>
-                    <th><img src="./imges/download.jpg" alt=""></th>
-                    <th>Đồng hồ</th>
-                    <th>9.90000</th>
-                    <th>1</th>
-                    <th>
-                        <div>10</div>
-                    </th>
-                </tr>
-            </tbody>
-            <footer>
-                <tr class="hb">
-                    <th colspan="5">Tổng giá trị đơn hàng</th>
-                    <th>
-                        <div>10</div>
-                    </th>
-                </tr>
-            </footer>
-        </table>
-    </div>
-    <div id="khung" style="background-color: rgb(255, 255, 255);">
+<body>
+    <div id="khung" style="background-color: azure;">
+        <div class="modal"></div>
+        <div class="cart-product">
+        </div>
         <div class="phandau">
             <marquee direction="right" style="font-family: Brush Script MT; font-size: 40px; color: gold;">Shop Bán Đồng Hồ Uy Tín Chất Lượng </marquee>
             <div class="thanhdau">
@@ -58,13 +27,13 @@
                         <li class="menu_li"><a href="">LIÊN HỆ</a></li>
                     </ul>
                 </div>
-                <div class="giohang" id="giohang">
-                    <a onclick="showcart()"><img src="../imgaes/cart.png" alt=""></a>
+                <div class="giohang" id="giohang" onclick="openCart();">
+                    <i class="fa-solid fa-cart-shopping" style="width: 30px;"></i>
                 </div>
                 
                 <div class="dndk">
-                    <button><a href="">Đăng Nhập</a></button>
-                    <button><a href="">Đăng kí</a></button>
+                    <button><a href="../html/DN.html">Đăng Nhập</a></button>
+                    <button><a href="../html/DK.html">Đăng kí</a></button>
                     
                 </div>
             </div>
@@ -102,7 +71,7 @@
                     </select>
                 </div>
                 <div class="tk">
-                    <input type="text" name="" id="" placeholder="Tìm kiếm"  >
+                    <input id="search-input" type="text" name="" placeholder="Tìm kiếm"  >
                 </div>
 
             </div>
@@ -123,39 +92,39 @@
                     <img src="../imgaes/casio.avif" alt="">
                 </div>
                 <div class="ath">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/calvin-klein.avif" alt="">
                 </div>
                 <div class="ath">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/certina.avif" alt="">
                 </div>
                 <div class="ath">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/fossil.avif" alt="">
                 </div>
                 <div class="ath">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/frederique-constant.avif" alt="">
                 </div>
                 <div class="ath">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/longines.avif" alt="">
                 </div>
             </div>
             <div class="ATHNT2">
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/orient.avif" alt="">
                 </div>
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/seiko.avif" alt="">
                 </div>
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/saga.avif" alt="">
                 </div>
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/sokolov.avif" alt="">
                 </div>
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/sr-watch.avif" alt="">
                 </div>
                 <div class="ath1">
-                    <img src="../imgaes/casio.avif" alt="">
+                    <img src="../imgaes/titoni.avif" alt="">
                 </div>
             </div>
         </div>
@@ -173,13 +142,38 @@
                 <p>CƠ SỞ HẢI PHÒNG: Số 176 Quán Trữ - Quận Kiến An - TP. Hải Phòng. Hotline: 0654 88 86 33ss</p>
             </div>
         </div>   
-        <div id="rong">
 
-        </div>
-        <div class="trang">
-            <ul class="sotrang"></ul>
+    </div>
+    <div class="modal-cart" id="showcart">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h3 class="cart-header-title"><i class="fa-solid fa-basket-shopping"></i> Giỏ Hàng</h3>
+                <button class="cart-close" onclick="closeModal()" style="width: 30px;height: 30px;border-radius: 50%;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-body">
+                <div class="cart-empty">
+                    <p>Không có sản phẩm nào trong giỏ hàng</p>
+                </div>
+                <ul class="cart-list">
+                    
+                </ul>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-price">
+                    <span class="text-tt" style="font-size: 20px; color: red;">Tổng Tiền: </span>
+                    <span class="text-price" style="font-size: 20px; color: red;">0đ</span>
+                </div>
+                <div class="cart-footer-payment">
+                    <button class="thanh-toan disabled" id = "order-btn">Đặt hàng</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/initlation.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/trangchu.js"></script>
 </body>
+
+
+
+
+
